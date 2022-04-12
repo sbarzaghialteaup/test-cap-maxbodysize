@@ -1,0 +1,22 @@
+### 1° POST as REST with compressed payload, it's ok
+POST http://localhost:4004/rest/createRecords
+Content-Type: application/json
+Content-Encoding: gzip
+
+< ./test.json.gz
+
+
+### 2° POST as REST with large compressed payload, is not ok
+POST http://localhost:4004/rest/createRecords
+Content-Type: application/json
+Content-Encoding: gzip
+
+< ./large.json.gz
+
+
+### 3° CAP service with large but not compressed payload is ok
+POST http://localhost:4004/catalog/createRecords
+Content-Type: application/json
+Content-Encoding: gzip
+
+< ./large.json
