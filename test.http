@@ -1,3 +1,6 @@
+### BUG IN REST CLIENT 0.25 FOR VSCODE USE POSTMAN INSTEAD:
+https://github.com/Huachao/vscode-restclient/issues/1031
+
 ### 1° POST as REST with compressed payload, it's ok
 POST http://localhost:4004/rest/createRecords
 Content-Type: application/json
