@@ -20,6 +20,12 @@ Content-Encoding: gzip
 ### 3° CAP service with large but not compressed payload is ok
 POST http://localhost:4004/catalog/createRecords
 Content-Type: application/json
-Content-Encoding: gzip
+
+< ./large.json
+
+
+### 4° POST as REST with large but no compressed payload, is ok
+POST http://localhost:4004/rest/createRecords
+Content-Type: application/json
 
 < ./large.json
